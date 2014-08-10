@@ -1,7 +1,10 @@
-# mount point   fstype          device
+# mount point	fstype    device    	[device2]
 
-/data         f2fs      /dev/block/platform/msm_sdcc.1/by-name/userdata     flags=fsflags="inline_xattr"
-/cache        ext4      /dev/block/platform/msm_sdcc.1/by-name/cache
-/system       ext4      /dev/block/platform/msm_sdcc.1/by-name/system
-/boot         emmc      /dev/block/platform/msm_sdcc.1/by-name/boot
-/recovery     emmc      /dev/block/platform/msm_sdcc.1/by-name/recovery
+/boot       mtd         boot
+/cache      yaffs2      cache
+/data       yaffs2      userdata
+/misc       mtd         misc
+/recovery   mtd         recovery
+/sdcard     vfat        /dev/block/mmcblk0p1        /dev/block/mmcblk0
+/system     yaffs2      system
+/sd-ext     ext4        /dev/block/mmcblk0p2
