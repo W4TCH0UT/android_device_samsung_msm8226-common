@@ -41,6 +41,8 @@ LOCAL_PATH := device/samsung/msm8226-common
 TARGET_SPECIFIC_HEADER_PATH += $(LOCAL_PATH)/include
 
 # Kernel
+
+TARGET_ARCH := arm
 TARGET_KERNEL_SOURCE := kernel/samsung/ms013g
 TARGET_KERNEL_CONFIG := VARIANT_DEFCONFIG=msm8226-sec_ms013g_eur_defconfig msm8226-sec_defconfig SELINUX_DEFCONFIG=selinux_defconfig
 BOARD_KERNEL_CMDLINE := console=null androidboot.console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37
