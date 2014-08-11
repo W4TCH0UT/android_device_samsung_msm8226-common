@@ -94,7 +94,7 @@ TARGET_HW_DISK_ENCRYPTION := true
 BOARD_HARDWARE_CLASS := device/samsung/msm8226-common/cmhw/
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := g7102,g7105
+TARGET_OTA_ASSERT_DEVICE := ms013g
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.qcom
