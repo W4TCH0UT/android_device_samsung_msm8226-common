@@ -21,6 +21,8 @@
 # definition file).
 #
 
+USE_CAMERA_STUB := true
+
 BOARD_VENDOR := samsung-qcom
 
 # inherit from the proprietary version
@@ -28,11 +30,16 @@ BOARD_VENDOR := samsung-qcom
 -include vendor/samsung/ms013g/BoardConfigVendor.mk
 
 # Platform
+TARGET_ARCH := arm
+TARGET_NO_BOOTLOADER := true
+TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI2 := armeabi
+TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno305
 TARGET_BOARD_PLATFORM := msm8226
 TARGET_BOOTLOADER_BOARD_NAME := MSM8226
 TARGET_CPU_VARIANT := cortex-a7
-TARGET_USE_KINGFISHER_OPTIMIZATION := true
+ARCH_ARM_HAVE_TLS_REGISTER := true
 
 -include device/samsung/qcom-common/BoardConfigCommon.mk
 
@@ -41,8 +48,6 @@ LOCAL_PATH := device/samsung/msm8226-common
 TARGET_SPECIFIC_HEADER_PATH += $(LOCAL_PATH)/include
 
 # Kernel
-
-TARGET_ARCH := arm
 TARGET_KERNEL_SOURCE := kernel/samsung/ms013g
 TARGET_KERNEL_CONFIG := VARIANT_DEFCONFIG=msm8226-sec_ms013g_eur_defconfig msm8226-sec_defconfig SELINUX_DEFCONFIG=selinux_defconfig
 BOARD_KERNEL_CMDLINE := console=null androidboot.console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37
@@ -99,4 +104,5 @@ BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_RECOVERY_SWIPE := true
+
 BOARD_HAS_NO_SELECT_BUTTON := true
