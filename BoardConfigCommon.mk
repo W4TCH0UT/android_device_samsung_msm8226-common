@@ -57,7 +57,6 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
 TARGET_KERNEL_SOURCE := kernel/samsung/ms013g
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_CUSTOM_BOOTIMG_MK := device/samsung/msm8226-common/mkbootimg.mk
-TARGET_CUSTOM_DTBTOOL := dtbTool
 
 # QCOM BSP
 TARGET_USES_QCOM_BSP := true
