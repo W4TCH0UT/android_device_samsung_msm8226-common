@@ -3,7 +3,7 @@ LOCAL_PATH := $(call my-dir)
 ## THIS IS A DEFAULT: YOU SHOULD OVERRIDE IT FROM THE DEVICE-SPECIFIC
 ## BoardConfig. Check the kernel's arch/arm/boot/dts/ path for possible
 ## values.
-MSM8226_DTS_TARGET ?= msm8226-sec-ms013geur
+MSM8226_DTS_TARGET ?= (msm8226-sec-ms013geur-), (msm8226-v1-mtp-)
 
 ## Don't change anything under here. The variables are named MSM8226_whatever
 ## on purpose, to avoid conflicts with similarly named variables at other
