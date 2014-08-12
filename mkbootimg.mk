@@ -18,7 +18,7 @@ MSM8226_DTS_FILE = $(lastword $(subst /, ,$(1)))
 DTB_FILE = $(addprefix $(KERNEL_OUT)/arch/arm/boot/,$(patsubst %.dts,%.dtb,$(call MSM8226_DTS_FILE,$(1))))
 ZIMG_FILE = $(addprefix $(KERNEL_OUT)/arch/arm/boot/,$(patsubst %.dts,%-zImage,$(call MSM8226_DTS_FILE,$(1))))
 KERNEL_ZIMG = $(KERNEL_OUT)/arch/arm/boot/zImage
-DTC = $(KERNEL_OUT)/scripts/dtc/dtc
+DTC = $(KERNEL_OUT)/scripts/dtc/
 
 define append-msm8226-dtb
 mkdir -p $(KERNEL_OUT)/arch/arm/boot;\
